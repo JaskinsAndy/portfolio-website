@@ -40,27 +40,12 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    try {
-      const form = e.target as HTMLFormElement
-      const formData = new FormData(form)
-      
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      })
-      
-      if (response.ok) {
-        setSubmitted(true)
-      } else {
-        throw new Error('Form submission failed')
-      }
-    } catch (error) {
-      console.error('Form submission error:', error)
-      alert('There was an error sending your message. Please try again or contact me directly.')
-    } finally {
+    // For now, just show success message
+    // In production, you can integrate with EmailJS or other email services
+    setTimeout(() => {
       setIsSubmitting(false)
-    }
+      setSubmitted(true)
+    }, 2000)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -280,13 +265,9 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <form 
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
                   onSubmit={handleSubmit} 
                   className="space-y-6"
                 >
-                  <input type="hidden" name="form-name" value="contact" />
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
