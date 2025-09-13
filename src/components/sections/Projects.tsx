@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { 
   ExternalLink, 
   Github, 
@@ -19,7 +20,7 @@ export default function Projects() {
     {
       title: 'Architecture Website',
       description: 'Modern and elegant website for an architecture firm showcasing their portfolio and services.',
-      image: '/Archi.mp4',
+      image: '/architect.png',
       category: 'Client Work',
       technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       liveUrl: 'https://youtu.be/v3EhceIqQIU',
@@ -29,7 +30,7 @@ export default function Projects() {
     {
       title: 'Milton Private School',
       description: 'Professional website for Milton Private School featuring admissions information, curriculum details, and school resources.',
-      image: '/dlya_igorya.mp4',
+      image: '/milton.png',
       category: 'Client Work',
       technologies: ['React', 'Next.js', 'CSS', 'Content Management'],
       liveUrl: 'https://youtu.be/L087xPtT2_0',
@@ -39,7 +40,7 @@ export default function Projects() {
     {
       title: 'Central Asian Community Website',
       description: 'Community website for Central Asian students and professionals, created for a client from Edinburgh University.',
-      image: '/CentralAsianUniversity.mp4',
+      image: '/university.png',
       category: 'Client Work',
       technologies: ['React', 'Node.js', 'MongoDB', 'Community Features'],
       liveUrl: 'https://youtu.be/5DbTY2yz0Sg',
@@ -93,24 +94,14 @@ export default function Projects() {
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <Card className="group overflow-hidden backdrop-blur-sm bg-card/30 border-border/50">
                   <div className="relative overflow-hidden">
-                    {project.image.endsWith('.mp4') ? (
-                      <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center relative">
-                        <video
-                          className="absolute inset-0 w-full h-full object-cover opacity-100"
-                          muted
-                          loop
-                          playsInline
-                          onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
-                          onMouseLeave={(e) => e.currentTarget.pause()}
-                        >
-                          <source src={project.image} type="video/mp4" />
-                        </video>
-                      </div>
-                    ) : (
-                      <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
-                        <Play className="h-16 w-16 text-muted-foreground" />
-                      </div>
-                    )}
+                    <div className="aspect-video relative overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {project.liveUrl && (
@@ -181,24 +172,14 @@ export default function Projects() {
               >
                 <Card className="group overflow-hidden backdrop-blur-sm bg-card/30 border-border/50 hover:border-primary/30 transition-all duration-300">
                   <div className="relative overflow-hidden">
-                    {project.image.endsWith('.mp4') ? (
-                      <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center relative">
-                        <video
-                          className="absolute inset-0 w-full h-full object-cover opacity-100"
-                          muted
-                          loop
-                          playsInline
-                          onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
-                          onMouseLeave={(e) => e.currentTarget.pause()}
-                        >
-                          <source src={project.image} type="video/mp4" />
-                        </video>
-                      </div>
-                    ) : (
-                      <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center">
-                        <Play className="h-12 w-12 text-muted-foreground" />
-                      </div>
-                    )}
+                    <div className="aspect-video relative overflow-hidden">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <CardContent className="p-6">
