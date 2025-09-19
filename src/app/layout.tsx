@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     title: 'Jasur | Web Developer & Designer',
     description: 'Transform your business with cutting-edge AI automation and web development.',
   },
+  icons: { icon: '/favicon.png' },
 }
 
 export const viewport = {
@@ -40,5 +41,6 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 
