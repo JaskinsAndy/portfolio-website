@@ -2,18 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { 
-  ExternalLink, 
-  Github, 
-  Code2,
-  Palette,
-  Smartphone,
-  Globe,
-  Play
-} from 'lucide-react'
+import { Code2 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 
 export default function Projects() {
   const projects = [
@@ -83,7 +74,7 @@ export default function Projects() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of projects I've built while learning web design and development. 
+            A collection of projects I&apos;ve built while learning web design and development. 
             Each project taught me something new and helped me grow as a designer.
           </p>
         </motion.div>
@@ -211,4 +202,7 @@ export default function Projects() {
     </section>
   )
 }
+
+
+
 

@@ -1,17 +1,16 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { 
-  Bot, 
-  Globe, 
-  TrendingUp, 
-  Zap, 
-  Clock, 
-  DollarSign, 
+import {
+  Bot,
+  Globe,
+  TrendingUp,
+  Zap,
+  Clock,
+  DollarSign,
   ArrowRight,
   CheckCircle,
   Cpu,
-  Smartphone,
   Search
 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -213,3 +212,5 @@ export default function Services() {
     </section>
   )
 }
+
+

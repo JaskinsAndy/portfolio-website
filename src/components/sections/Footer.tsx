@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Transforming businesses through AI automation, web development, and digital marketing. 
-              Let's scale your success together.
+              Let&apos;s scale your success together.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (

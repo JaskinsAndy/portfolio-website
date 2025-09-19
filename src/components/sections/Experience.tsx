@@ -77,7 +77,7 @@ export default function Experience() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            My journey in web design started 2 years ago, and I'm constantly learning and growing. 
+            My journey in web design started 2 years ago, and I&apos;m constantly learning and growing. 
             Every project teaches me something new about design and development.
           </p>
         </motion.div>

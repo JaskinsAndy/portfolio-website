@@ -27,8 +27,6 @@ function escapeHtml(value: string): string {
 
 function sanitizeHeader(value: string): string {
   return value.replace(/[\r\n]/g, ' ').trim()
-
-]/g, ' ').trim()
 }
 
 export async function POST(request: Request) {

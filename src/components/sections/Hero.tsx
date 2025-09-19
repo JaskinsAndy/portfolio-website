@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Download, Palette, Code2, Figma, Sparkles, Mail } from 'lucide-react'
+import { ArrowRight, Palette, Code2, Figma, Sparkles, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -67,9 +67,9 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl"
             >
-              Hi, I'm Jasur! I'm a passionate web designer with 2 years of experience learning 
+              Hi, I&apos;m Jasur! I&apos;m a passionate web designer with 2 years of experience learning 
               and creating digital experiences. I love transforming ideas into 
-              <strong className="text-foreground"> clean, functional websites</strong> and I'm always eager to learn more.
+              <strong className="text-foreground"> clean, functional websites</strong> and I&apos;m always eager to learn more.
             </motion.p>
 
             <motion.div
@@ -171,3 +171,4 @@ export default function Hero() {
     </section>
   )
 }
+

@@ -76,7 +76,7 @@ export default function Skills() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            With 2+ years of experience, I've honed my skills across design and development, 
+            With 2+ years of experience, I&apos;ve honed my skills across design and development, 
             creating seamless digital experiences that users love.
           </p>
         </motion.div>

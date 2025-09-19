@@ -3,17 +3,13 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle,
-  Linkedin,
-  Twitter,
   Instagram,
-  Github,
-  Dribbble,
   Sparkles
 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -152,7 +148,7 @@ export default function Contact() {
                   Message Received!
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 text-center">
-                  Thank you for reaching out! I'll get back to you within 24 hours to discuss 
+                  Thank you for reaching out! I&apos;ll get back to you within 24 hours to discuss 
                   your project and how we can bring your vision to life.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -190,7 +186,7 @@ export default function Contact() {
         >
           <Badge variant="secondary" className="px-4 py-2 text-sm mb-4">
             <Sparkles className="h-4 w-4 mr-2" />
-            Let's Work Together
+            Let&apos;s Work Together
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Ready to Create Something
@@ -199,8 +195,8 @@ export default function Contact() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm always excited to work on new projects and collaborate with amazing people. 
-            Let's discuss how I can help bring your vision to life.
+            I&apos;m always excited to work on new projects and collaborate with amazing people. 
+            Let&apos;s discuss how I can help bring your vision to life.
           </p>
         </motion.div>
 
@@ -220,7 +216,7 @@ export default function Contact() {
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-6">
-                  {contactInfo.map((item, index) => (
+                  {contactInfo.map((item) => (
                     <div key={item.title} className="flex items-start space-x-4">
                       <div className="bg-primary/10 p-3 rounded-lg">
                         <item.icon className="h-5 w-5 text-primary" />
@@ -267,7 +263,7 @@ export default function Contact() {
                       <span className="font-semibold">Available for Work</span>
                     </div>
                     <p className="text-muted-foreground mb-4">
-                      I'm eager to take on new projects and collaborations. As a beginner, 
+                      I&apos;m eager to take on new projects and collaborations. As a beginner, 
                       I offer competitive rates and lots of enthusiasm!
                     </p>
                     <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">
@@ -444,7 +440,7 @@ export default function Contact() {
                   )}
 
                   <p className="text-sm text-muted-foreground text-center">
-                    I'll get back to you within 24 hours to discuss your project and next steps.
+                    I&apos;ll get back to you within 24 hours to discuss your project and next steps.
                   </p>
                 </form>
               </CardContent>
@@ -455,3 +451,8 @@ export default function Contact() {
     </section>
   )
 }
+
+
+
+
+

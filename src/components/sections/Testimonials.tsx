@@ -21,7 +21,7 @@ export default function Testimonials() {
       company: 'GrowthCorp',
       image: '/testimonial-2.jpg',
       rating: 5,
-      text: "The custom web application they built for us increased our conversion rate by 300%. The user experience is incredible, and our customers love the new interface. Best investment we've made in years.",
+      text: "The custom web application they built for us increased our conversion rate by 300%. The user experience is incredible, and our customers love the new interface. Best investment we&apos;ve made in years.",
       metric: '300% conversion increase',
       industry: 'E-commerce'
     },
@@ -88,8 +88,8 @@ export default function Testimonials() {
             What <span className="text-primary-600">Clients Say</span> About Our Work
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what business leaders say about 
-            the transformations we've delivered.
+            Don&apos;t just take our word for it. Here&apos;s what business leaders say about 
+            the transformations we&apos;ve delivered.
           </p>
         </motion.div>
 
@@ -178,7 +178,7 @@ export default function Testimonials() {
               Ready to Join These Success Stories?
             </h3>
             <p className="text-lg text-gray-600 mb-6">
-              Let's discuss how we can transform your business operations and drive similar results.
+              Let&apos;s discuss how we can transform your business operations and drive similar results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
