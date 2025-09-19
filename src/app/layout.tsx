@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Jasur | Web Developer & Designer',
     description: 'Transform your business with cutting-edge AI automation and web development.',
   },
-  icons: { icon: '/favicon.png' },
+  icons: { icon: '/favicon.ico' },
 }
 
 export const viewport = {
@@ -41,6 +41,7 @@ export default function RootLayout({
     </html>
   )
 }
+
 
 
 
