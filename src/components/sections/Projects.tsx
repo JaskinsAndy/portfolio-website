@@ -18,6 +18,16 @@ import { Button } from '@/components/ui/button'
 export default function Projects() {
   const projects = [
     {
+      title: 'Burchmulla Resort',
+      description: 'Luxury mountain resort website with booking flow, immersive imagery, and warm hospitality copy.',
+      image: '/Burchmulla.png',
+      category: 'Hospitality Design',
+      technologies: ['Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
+      liveUrl: '',
+      featured: false,
+      color: 'from-amber-500 to-orange-500'
+    },
+    {
       title: 'Architecture Website',
       description: 'Modern and elegant website for an architecture firm showcasing their portfolio and services.',
       image: '/architect.png',
@@ -104,13 +114,6 @@ export default function Projects() {
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {project.liveUrl && (
-                        <Button size="sm" asChild>
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-4 w-4" />
-                          </a>
-                        </Button>
-                      )}
                     </div>
                   </div>
                 </Card>
@@ -138,14 +141,6 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex space-x-4">
-                  {project.liveUrl && (
-                    <Button asChild className="group">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        View Live
-                        <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </Button>
-                  )}
                 </div>
               </div>
             </motion.div>
@@ -204,13 +199,6 @@ export default function Projects() {
                       ))}
                     </div>
                     <div className="flex space-x-2">
-                      {project.liveUrl && (
-                        <Button size="sm" asChild>
-                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="h-3 w-3" />
-                          </a>
-                        </Button>
-                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -223,3 +211,4 @@ export default function Projects() {
     </section>
   )
 }
+

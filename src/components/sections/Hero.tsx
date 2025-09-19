@@ -17,8 +17,8 @@ export default function Hero() {
 
   const skills = [
     { name: 'UI/UX Design', icon: Palette },
-    { name: 'Frontend Dev', icon: Code2 },
-    { name: 'Figma Expert', icon: Figma },
+    { name: 'Backend Dev', icon: Code2 },
+    { name: 'Frontend dev', icon: Figma },
     { name: 'Creative Direction', icon: Sparkles },
   ]
 

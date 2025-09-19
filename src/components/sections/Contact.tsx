@@ -23,7 +23,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const defaultFormState = {
     name: '',
     email: '',
     company: '',
@@ -31,21 +31,47 @@ export default function Contact() {
     budget: '',
     message: '',
     timeline: ''
-  })
+  }
 
+  const [formData, setFormData] = useState(defaultFormState)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setError(null)
     setIsSubmitting(true)
-    
-    // For now, just show success message
-    // In production, you can integrate with EmailJS or other email services
-    setTimeout(() => {
-      setIsSubmitting(false)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => null)
+        const message =
+          (data && typeof data === 'object' && 'error' in data && typeof data.error === 'string'
+            ? data.error
+            : null) ?? 'Failed to send your message. Please try again later.'
+
+        throw new Error(message)
+      }
+
+      setFormData({ ...defaultFormState })
       setSubmitted(true)
-    }, 2000)
+    } catch (err) {
+      console.error('Contact form submission failed', err)
+      const message =
+        err instanceof Error
+          ? err.message
+          : 'Failed to send your message. Please try again later.'
+      setError(message)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -59,8 +85,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'jasurka2015@gmail.com',
-      href: 'mailto:jasurka2015@gmail.com'
+      value: 'jasurwebdev@gmail.com',
+      href: 'mailto:jasurwebdev@gmail.com'
     },
     {
       icon: Phone,
@@ -131,11 +157,12 @@ export default function Contact() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild>
-                    <a href="mailto:jasurka2015@gmail.com">
+                    <a href="mailto:jasurwebdev@gmail.com">
                       <Mail className="h-5 w-5 mr-2" />
                       Email Directly
                     </a>
                   </Button>
+
                   <Button
                     variant="outline"
                     onClick={() => setSubmitted(false)}
@@ -409,6 +436,12 @@ export default function Contact() {
                       </>
                     )}
                   </Button>
+
+                  {error && (
+                    <p className="text-sm text-red-500 text-center mt-4" role="alert">
+                      {error}
+                    </p>
+                  )}
 
                   <p className="text-sm text-muted-foreground text-center">
                     I'll get back to you within 24 hours to discuss your project and next steps.
