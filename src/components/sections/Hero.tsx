@@ -9,10 +9,10 @@ import { AceteryBackground } from '@/components/ui/aceternity-background'
 
 export default function Hero() {
   const stats = [
-    { label: 'Projects Completed', value: '15+' },
-    { label: 'Happy Clients', value: '10+' },
-    { label: 'Years Experience', value: '2' },
-    { label: 'Courses Completed', value: '5+' },
+    { label: 'Projects Completed', value: '20+' },
+    { label: 'Happy Clients', value: '12+' },
+    { label: 'Years Experience', value: '2+' },
+    { label: 'Specialist Certifications', value: '8+' },
   ]
 
   const skills = [
@@ -67,9 +67,8 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl"
             >
-              Hi, I&apos;m Jasur! I&apos;m a passionate web designer with 2 years of experience learning 
-              and creating digital experiences. I love transforming ideas into 
-              <strong className="text-foreground"> clean, functional websites</strong> and I&apos;m always eager to learn more.
+              Hi, I&apos;m Jasur - a web designer and frontend developer with 2+ years of experience turning ambitious ideas into conversion-focused products.
+              I love transforming strategy into <strong className="text-foreground">clean, functional websites</strong> that win trust and deliver results.
             </motion.p>
 
             <motion.div

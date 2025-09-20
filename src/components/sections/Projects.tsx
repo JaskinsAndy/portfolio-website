@@ -74,8 +74,8 @@ export default function Projects() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A collection of projects I&apos;ve built while learning web design and development. 
-            Each project taught me something new and helped me grow as a designer.
+            A collection of projects built for a diverse range of clients.
+            Each engagement blends strategy, UX, and development to deliver measurable outcomes.
           </p>
         </motion.div>
 
@@ -202,6 +202,7 @@ export default function Projects() {
     </section>
   )
 }
+
 
 
 

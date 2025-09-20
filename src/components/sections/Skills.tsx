@@ -1,15 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { 
-  Figma, 
-  Palette, 
-  Code2, 
-  Smartphone, 
+import {
+  Figma,
+  Palette,
+  Code2,
+  Smartphone,
   Globe,
   Zap,
   Star,
-  Trophy
+  Trophy,
+  Search,
+  Rocket,
+  Sparkles
 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -48,11 +51,27 @@ export default function Skills() {
     }
   ]
 
-  const achievements = [
-    { title: 'Awwwards Winner', description: '3x Site of the Day', icon: Trophy },
-    { title: 'CSS Design Awards', description: 'Special Kudos', icon: Star },
-    { title: 'Dribbble Top Shot', description: '50+ Popular shots', icon: Zap },
-    { title: 'Behance Featured', description: '25+ Project Features', icon: Palette },
+  const processSteps = [
+    {
+      title: 'Discovery & Strategy',
+      description: 'We clarify your goals, audience, and success metrics before any pixels are designed.',
+      icon: Search
+    },
+    {
+      title: 'Experience Design',
+      description: 'I map user journeys, craft wireframes, and define the visual identity that fits your brand.',
+      icon: Palette
+    },
+    {
+      title: 'Build & Refine',
+      description: 'Design systems and performant frontends come together with fast feedback loops.',
+      icon: Code2
+    },
+    {
+      title: 'Launch & Optimization',
+      description: 'We release with confidence, monitor results, and iterate to keep the product performing.',
+      icon: Rocket
+    }
   ]
 
   return (
@@ -141,27 +160,37 @@ export default function Skills() {
         >
           <Card className="backdrop-blur-sm bg-card/30 border-border/50">
             <CardHeader>
-              <CardTitle className="text-center text-2xl flex items-center justify-center gap-2">
-                <Trophy className="h-6 w-6 text-primary" />
-                Learning & Certifications
+              <CardTitle className="text-center text-2xl flex flex-col items-center gap-2">
+                <span className="flex items-center gap-2">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                  My Process
+                </span>
+                <span className="text-sm text-muted-foreground uppercase tracking-wide">
+                  Mein Arbeitsprozess
+                </span>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {achievements.map((achievement, index) => (
+                {processSteps.map((step, index) => (
                   <motion.div
-                    key={achievement.title}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    key={step.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="text-center p-4 rounded-lg bg-gradient-to-b from-primary/5 to-primary/10 border border-primary/20"
+                    className="p-6 rounded-xl bg-gradient-to-b from-primary/5 to-primary/10 border border-primary/20 h-full"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <achievement.icon className="h-6 w-6 text-white" />
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-sm font-semibold text-primary">
+                        {index + 1}
+                      </div>
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <step.icon className="h-5 w-5 text-white" />
+                      </div>
                     </div>
-                    <h3 className="font-semibold text-foreground mb-1">{achievement.title}</h3>
-                    <p className="text-sm text-muted-foreground">{achievement.description}</p>
+                    <h3 className="font-semibold text-foreground mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -172,3 +201,4 @@ export default function Skills() {
     </section>
   )
 }
+

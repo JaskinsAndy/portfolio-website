@@ -69,7 +69,7 @@ export default function Testimonials() {
 
   const stats = [
     { number: '98%', label: 'Client Satisfaction' },
-    { number: '150+', label: 'Projects Completed' },
+    { number: '20+', label: 'Projects Completed' },
     { number: '500%', label: 'Average ROI' },
     { number: '24/7', label: 'Support Available' }
   ]
@@ -200,3 +200,5 @@ export default function Testimonials() {
     </section>
   )
 }
+
+

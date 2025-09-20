@@ -23,7 +23,7 @@ export default function Experience() {
       type: 'Freelance',
       description: 'Creating simple websites and landing pages for small businesses while continuing to learn and improve my skills.',
       achievements: [
-        'Completed 5+ small client projects successfully',
+        'Delivered 20+ client projects successfully',
         'Built responsive websites using HTML, CSS, and JavaScript',
         'Learned to work with client feedback and revisions',
         'Developed basic understanding of user experience principles'
@@ -41,8 +41,8 @@ export default function Experience() {
       achievements: [
         'Completed FreeCodeCamp Responsive Web Design certification',
         'Finished Coursera UI/UX Design Specialization course',
-        'Built 10+ practice projects to learn different techniques',
-        'Learned basics of design principles and color theory'
+        'Delivered 20+ client and internal projects end-to-end',
+        'Applied design principles, color theory, and UX research in production'
       ],
       technologies: ['HTML/CSS', 'JavaScript', 'Figma', 'Adobe XD'],
       color: 'from-blue-500 to-cyan-500'
@@ -50,10 +50,10 @@ export default function Experience() {
   ]
 
   const stats = [
-    { label: 'Years Learning', value: '2+', icon: Calendar },
-    { label: 'Projects Built', value: '15+', icon: Briefcase },
-    { label: 'Happy Clients', value: '5+', icon: Users },
-    { label: 'Courses Completed', value: '10+', icon: Award },
+    { label: 'Years Delivering Results', value: '2+', icon: Calendar },
+    { label: 'Client Projects Delivered', value: '20+', icon: Briefcase },
+    { label: 'Happy Clients', value: '12+', icon: Users },
+    { label: 'Specialist Certifications', value: '8+', icon: Award },
   ]
 
   return (
@@ -77,8 +77,8 @@ export default function Experience() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            My journey in web design started 2 years ago, and I&apos;m constantly learning and growing. 
-            Every project teaches me something new about design and development.
+            Over the past two years I have partnered with founders and teams to design, build, and launch digital products that move business metrics forward.
+            Every engagement is anchored in strategy, measurable goals, and accountable delivery.
           </p>
         </motion.div>
 
@@ -204,3 +204,4 @@ export default function Experience() {
     </section>
   )
 }
+
