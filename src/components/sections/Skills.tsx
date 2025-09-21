@@ -165,9 +165,6 @@ export default function Skills() {
                   <Sparkles className="h-6 w-6 text-primary" />
                   My Process
                 </span>
-                <span className="text-sm text-muted-foreground uppercase tracking-wide">
-                  Mein Arbeitsprozess
-                </span>
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -201,4 +198,12 @@ export default function Skills() {
     </section>
   )
 }
+
+
+
+
+
+
+
+
 
