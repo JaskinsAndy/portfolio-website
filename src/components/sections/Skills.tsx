@@ -54,7 +54,7 @@ export default function Skills() {
   const processSteps = [
     {
       title: 'Discovery & Strategy',
-      description: 'We clarify your goals, audience, and success metrics before any pixels are designed.',
+      description: 'I clarify your goals, audience, and success metrics before any pixels are designed.',
       icon: Search
     },
     {
@@ -69,7 +69,7 @@ export default function Skills() {
     },
     {
       title: 'Launch & Optimization',
-      description: 'We release with confidence, monitor results, and iterate to keep the product performing.',
+      description: 'I release with confidence, monitor results, and iterate to keep the product performing.',
       icon: Rocket
     }
   ]

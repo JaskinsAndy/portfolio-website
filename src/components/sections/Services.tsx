@@ -70,7 +70,7 @@ export default function Services() {
     {
       icon: Search,
       title: 'Discovery & Analysis',
-      description: 'We analyze your business processes and identify optimization opportunities.'
+      description: 'I analyze your business processes and identify optimization opportunities.'
     },
     {
       icon: Cpu,
